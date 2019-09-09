@@ -7,7 +7,7 @@ public class MenuButton : MonoBehaviour
 {
     public void changenemuscene(string scenename)
     {
-        Application.loadscene (scenename);
+        Scenemanager.loadScene (scenename);
 
     }
   
