@@ -1,0 +1,30 @@
+Nexa v1.1
+October 10 2017
+
+file changes:
+Nexa Heavy v1.1 - UPDATED from v1.0
+
+
+----
+Nexa v1.0
+December 07 2016
+
+files included:
+Nexa Light Free v1.0
+Nexa Bold Free v1.0
+Nexa Thin v1.0
+Nexa Thin Italic v1.0
+Nexa Light v1.0
+Nexa Light Italic v1.0
+Nexa Book v1.0
+Nexa Book Italic v1.0
+Nexa Regular v1.0
+Nexa Italic v1.0
+Nexa Bold v1.0
+Nexa Bold Italic v1.0
+Nexa XBold v1.0
+Nexa XBold Italic v1.0
+Nexa Heavy v1.0
+Nexa Heavy Italic v1.0
+Nexa Black v1.0
+Nexa Black Italic v1.0

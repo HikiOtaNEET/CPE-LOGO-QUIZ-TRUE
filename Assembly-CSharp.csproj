@@ -56,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\MenuButton.cs" />
+     <None Include="Assets\Fonts\Nexa-Demo\Licenses\Demo.txt" />
+     <None Include="Assets\Fonts\Nexa-Demo\Reference\Release Notes.txt" />
+     <None Include="Assets\Fonts\montserrat\SIL Open Font License.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>E:/Unity Projects/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

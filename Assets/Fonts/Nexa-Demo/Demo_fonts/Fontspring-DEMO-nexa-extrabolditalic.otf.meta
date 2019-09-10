@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dcc0de4657f123c4f8508c6600c84b06
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FONTSPRING DEMO - Nexa ExtraBold Italic
+  fontNames:
+  - FONTSPRING DEMO - Nexa ExtraBold Italic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

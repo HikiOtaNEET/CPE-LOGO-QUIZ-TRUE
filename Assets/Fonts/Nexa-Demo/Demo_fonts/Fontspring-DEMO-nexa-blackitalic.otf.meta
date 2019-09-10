@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a66034697da930f4498eedc8e08cd5a6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FONTSPRING DEMO - Nexa Black Italic
+  fontNames:
+  - FONTSPRING DEMO - Nexa Black Italic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
