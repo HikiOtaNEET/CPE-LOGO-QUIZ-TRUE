@@ -8,7 +8,6 @@ public class MenuButton : MonoBehaviour
     public void changenemuscene(string scenename)
     {
         Scenemanager.loadScene (scenename);
-
     }
   
 }
