@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayButton : MonoBehaviour
+public class PlayIcon : MonoBehaviour
 {
-    public void changenemuscene(string scenename)
+    public void changemenuscene(string sceneName)
     {
-        Scenemanager.loadScene(scenename);
-
+        SceneManager.LoadScene(sceneName);
     }
 }
