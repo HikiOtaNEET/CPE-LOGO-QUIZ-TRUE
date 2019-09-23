@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 21662965}
   - component: {fileID: 21662968}
   - component: {fileID: 21662967}
+  - component: {fileID: 21662969}
   m_Layer: 5
   m_Name: Markings
   m_TagString: Untagged
@@ -221,6 +222,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b65eaa11a62e44d8e5281e45d42618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &21662969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21662963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &35885498
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +403,7 @@ GameObject:
   - component: {fileID: 413752423}
   - component: {fileID: 413752422}
   - component: {fileID: 413752421}
+  - component: {fileID: 413752424}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -508,6 +525,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413752419}
   m_CullTransparentMesh: 0
+--- !u!114 &413752424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413752419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +817,7 @@ GameObject:
   - component: {fileID: 1122585727}
   - component: {fileID: 1122585729}
   - component: {fileID: 1122585728}
+  - component: {fileID: 1122585730}
   m_Layer: 5
   m_Name: CpE Logo
   m_TagString: Untagged
@@ -853,6 +886,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122585726}
   m_CullTransparentMesh: 0
+--- !u!114 &1122585730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122585726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1318999791
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +912,7 @@ GameObject:
   - component: {fileID: 1318999792}
   - component: {fileID: 1318999794}
   - component: {fileID: 1318999793}
+  - component: {fileID: 1318999795}
   m_Layer: 5
   m_Name: Quiz
   m_TagString: Untagged
@@ -932,6 +981,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318999791}
   m_CullTransparentMesh: 0
+--- !u!114 &1318999795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318999791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1602390556
 GameObject:
   m_ObjectHideFlags: 0
