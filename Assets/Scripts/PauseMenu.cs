@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Scene2");
+        SceneManager.LoadScene("MainMenu");
     }
     public void QuitGame()
     {
