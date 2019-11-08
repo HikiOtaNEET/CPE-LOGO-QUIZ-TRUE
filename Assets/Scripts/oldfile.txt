@@ -1,0 +1,120 @@
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI; 
+using System.IO;
+using SimpleJSON;
+using System.Linq;
+using UnityEngine.SceneManagement;
+
+public class loadlogo : MonoBehaviour
+{
+    public logos[] logo;
+	
+
+    string jsonString;
+    string path;
+    public GameObject logoarea;
+    public Text score;
+    public Text timer;
+    public Text choice1;
+    public Text choice2;
+    public Text choice3;
+    public Text choice4;
+
+    string[] logoitem;
+    string[] chosenlogos;
+    string[] choicearr;
+
+    public void Start() 
+    {
+        DontDestroyOnLoad(gameObject);
+
+        jsonString = File.ReadAllText("Assets/Scripts/directory.json");
+        logos items = JsonUtility.FromJson<logos>(jsonString);  //load JSON file
+
+        logoitem = items.easy; //random item in the dir
+
+
+
+        Debug.Log(logoitem[0]);
+        path = "Sprites/equipment/" + logoitem[0]; // put in pathpp
+
+        logoarea.GetComponent<Image>().sprite = Resources.Load<Sprite>(path); //load image from path
+        Debug.Log("okay");
+    }
+    
+}
+
+
+////////////////
+
+
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+public class GameController : MonoBehaviour
+{
+    public SimpleObjectPool answerButtonObjectPool;
+    public GameObject questionDisplayText;
+    public Transform answerButtonParent;
+
+    private DataController dataController;
+    private RoundData currentRoundData;
+    private QuestionData[] questionPool;
+
+    private bool isRoundActive;
+    private float timeRemaining;
+    private int questionIndex;
+    private int playerScore;
+    private List<GameObject> answerButtonGameObjects = new List<GameObject>();
+
+    void Start()
+    {
+        dataController = FindObjectOfType<DataController>();
+        currentRoundData = dataController.GetCurrentRoundData();
+        questionPool = currentRoundData.questions;
+        timeRemaining = currentRoundData.timeLimitInSeconds;
+
+        playerScore = 0;
+        questionIndex = 0;
+
+        ShowQuestion();
+        isRoundActive = true;
+    }
+
+    private void ShowQuestion()
+    {
+        RemoveAnswerButtons();
+        QuestionData questionData = questionPool[questionIndex];
+        questionDisplayText.text = questionData.questionText;
+
+        for (int i = 0; i < questionData.answers.Length; i++)
+        {
+            GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
+            answerButtonGameObjects.Add(answerButtonGameObject);
+            answerButtonGameObject.transform.SetParent(answerButtonParent);
+
+            AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
+            answerButton.Setup(questionData.answers[i]);
+        }
+    }
+
+    private void RemoveAnswerButtons()
+    {
+        while (answerButtonGameObjects.Count > 0)
+        {
+            answerButtonObjectPool.ReturnObject(answerButtonGameObjects[0]);
+            answerButtonGameObjects.RemoveAt(0);
+        }
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
