@@ -39,6 +39,8 @@ public class GameControllerAve : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("checkpoint 1");
+
         dataController = FindObjectOfType<DataController>();
         currentRoundData = dataController.GetCurrentRoundData();
         timeRemaining = currentRoundData.timeLimitInSeconds;
@@ -46,8 +48,11 @@ public class GameControllerAve : MonoBehaviour
 
         jsonString = File.ReadAllText("Assets/Scripts/directoryAve.json");
         logos items = JsonUtility.FromJson<logos>(jsonString);  //load JSON file
-
+        
         logoitem = items.easy;
+        Debug.Log(logoitem);
+        
+        Debug.Log("checkpoint 2");
 
         playerScore = 0;
         questionIndex = 0;
@@ -61,7 +66,7 @@ public class GameControllerAve : MonoBehaviour
 
         
         
-
+    
 
     }
 
@@ -85,7 +90,7 @@ public class GameControllerAve : MonoBehaviour
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
 
-            AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
+            AnswerButtonAve answerButton = answerButtonGameObject.GetComponent<AnswerButtonAve>();
             answerButton.Setup(button[i]);
         }
     }
@@ -106,7 +111,7 @@ public class GameControllerAve : MonoBehaviour
         {
             do
             {
-                target = logoitem[Random.Range(0, 31)];
+                target = logoitem[Random.Range(0, 36)];
             }
             while (chosenlogos.Contains(target) == true);
             
@@ -123,7 +128,7 @@ public class GameControllerAve : MonoBehaviour
         {
             do
             {
-                choice = logoitem[Random.Range(0,31)];
+                choice = logoitem[Random.Range(0,36)];
             }
             while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]) ;
             button[z] = choice;
@@ -157,8 +162,8 @@ public class GameControllerAve : MonoBehaviour
     public void EndRound()
     {
         isRoundActive = false;
-        dataController.SubmitNewPlayerScore(playerScore);
-        highScoreDisplay.text = dataController.GetHighestPlayerScore().ToString();
+        dataController.SubmitNewPlayerScoreAve(playerScore);
+        highScoreDisplay.text = dataController.GetHighestPlayerScoreAve().ToString();
 
 
         logoarea.SetActive(false);

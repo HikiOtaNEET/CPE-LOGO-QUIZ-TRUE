@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class PlayerProgress
 {
-    public float highestScore = 0f;
+    public float highestScore;
+    public float highestScoreAve;
+    public float highestScoreDifficult;
 }
