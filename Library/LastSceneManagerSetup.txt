@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Persistent.unity
+=======
+- path: Assets/Scenes/MainMenu.unity
+>>>>>>> design
   isLoaded: 1
   isActive: 1
   isSubScene: 0
