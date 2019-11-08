@@ -72,9 +72,12 @@
     <Compile Include="Assets\Scripts\GameControllerDifficult.cs" />
     <Compile Include="Assets\Scripts\logos.cs" />
     <Compile Include="Assets\Scripts\PlayerProgress.cs" />
+    <Compile Include="Assets\Scripts\PlayerProgressAve.cs" />
+    <Compile Include="Assets\Scripts\PlayerProgressDifficult.cs" />
     <Compile Include="Assets\Scripts\PlayIcon.cs" />
     <Compile Include="Assets\Scripts\QuestionData.cs" />
     <Compile Include="Assets\Scripts\RoundData.cs" />
+    <Compile Include="Assets\Scripts\ShowHighscores.cs" />
     <Compile Include="Assets\Scripts\SimpleObjectPool.cs" />
     <None Include="Assets\Fonts\Nexa-Demo\Licenses\Demo.txt" />
     <None Include="Assets\Fonts\Nexa-Demo\Reference\Release Notes.txt" />

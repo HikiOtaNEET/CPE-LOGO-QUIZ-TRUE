@@ -162,8 +162,8 @@ public class GameControllerAve : MonoBehaviour
     public void EndRound()
     {
         isRoundActive = false;
-        dataController.SubmitNewPlayerScore(playerScore);
-        highScoreDisplay.text = dataController.GetHighestPlayerScore().ToString();
+        dataController.SubmitNewPlayerScoreAve(playerScore);
+        highScoreDisplay.text = dataController.GetHighestPlayerScoreAve().ToString();
 
 
         logoarea.SetActive(false);

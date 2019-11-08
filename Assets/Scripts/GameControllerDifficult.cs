@@ -162,8 +162,8 @@ public class GameControllerDifficult : MonoBehaviour
     public void EndRound()
     {
         isRoundActive = false;
-        dataController.SubmitNewPlayerScore(playerScore);
-        highScoreDisplay.text = dataController.GetHighestPlayerScore().ToString();
+        dataController.SubmitNewPlayerScoreDifficult(playerScore);
+        highScoreDisplay.text = dataController.GetHighestPlayerScoreDifficult().ToString();
 
 
         logoarea.SetActive(false);
