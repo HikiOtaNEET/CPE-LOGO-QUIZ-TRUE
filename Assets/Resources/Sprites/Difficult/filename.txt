@@ -1,0 +1,34 @@
+8051 Development Board.jpg
+8051 Microcontroller Kit with 8085 Microprocessor.jpg
+Aplab LCRQ Meter.jpg
+Arbitrary Function Generator.jpg
+ARM Development Tool.jpeg
+Bi-color-LED.jpg
+Coulomb's law.jpg
+Darlington-transistor.jpg
+Digital IC Tester.jpg
+Digital Phosphor Oscilloscope.jpg
+DPDT-switch.jpg
+DPST-switch.jpg
+filename.txt
+FPGA Kit.jpg
+Frequency.jpg
+Function Generator.jpg
+Green=5.jpg
+Heterojunction-bipolar-transistor.jpg
+LCD Color Digital Storage oscilloscope.jpg
+Linear IC Tester.jpg
+L'Hospital's Rule.jpg
+Orange=1000.jpg
+Period.jpg
+Photoresistor.jpg
+Piezoelectric-buzzer.jpg
+rfid sensor.jpg
+SMD-LED.jpg
+soil moisture sensor.jpg
+SPDT-toggle-switch.jpg
+SPST-switch.jpg
+Standard Deviation.jpg
+True Power.jpg
+ultrasonic sensor.jpg
+Universal IC Programmer.jpg
