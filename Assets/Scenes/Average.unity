@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f3fc212a80650b4a99fe1028045823b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 9012265909211863642, guid: ec24eda33710e2a44bfba74f71a3fe51, type: 3}
+  prefab: {fileID: 9012265909211863642, guid: a4d81132de7d44c40ab8ea98a01423e5, type: 3}
 --- !u!4 &1988773498
 Transform:
   m_ObjectHideFlags: 0

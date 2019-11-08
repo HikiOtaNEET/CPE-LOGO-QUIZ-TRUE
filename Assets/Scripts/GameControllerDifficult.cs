@@ -39,6 +39,8 @@ public class GameControllerDifficult : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("checkpoint 1");
+
         dataController = FindObjectOfType<DataController>();
         currentRoundData = dataController.GetCurrentRoundData();
         timeRemaining = currentRoundData.timeLimitInSeconds;
@@ -48,6 +50,9 @@ public class GameControllerDifficult : MonoBehaviour
         logos items = JsonUtility.FromJson<logos>(jsonString);  //load JSON file
 
         logoitem = items.easy;
+        Debug.Log(logoitem);
+        
+        Debug.Log("checkpoint 2");
 
         playerScore = 0;
         questionIndex = 0;
@@ -71,7 +76,7 @@ public class GameControllerDifficult : MonoBehaviour
 
         timeRemaining = 10;
 
-        path = "Sprites/Average/" + chosenlogos[questionIndex]; // put in pathpp
+        path = "Sprites/Difficult/" + chosenlogos[questionIndex]; // put in pathpp
         logoarea.GetComponent<Image>().sprite = Resources.Load<Sprite>(path);
 
         Debug.Log(chosenlogos[questionIndex]);
@@ -85,7 +90,7 @@ public class GameControllerDifficult : MonoBehaviour
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
 
-            AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
+            AnswerButtonDifficult answerButton = answerButtonGameObject.GetComponent<AnswerButtonDifficult>();
             answerButton.Setup(button[i]);
         }
     }
@@ -106,7 +111,7 @@ public class GameControllerDifficult : MonoBehaviour
         {
             do
             {
-                target = logoitem[Random.Range(0, 31)];
+                target = logoitem[Random.Range(0, 33)];
             }
             while (chosenlogos.Contains(target) == true);
             
@@ -123,7 +128,7 @@ public class GameControllerDifficult : MonoBehaviour
         {
             do
             {
-                choice = logoitem[Random.Range(0,31)];
+                choice = logoitem[Random.Range(0,33)];
             }
             while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]) ;
             button[z] = choice;
