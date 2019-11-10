@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AnswerButton.cs" />
+    <Compile Include="Assets\Scripts\AnswerButtonAve.cs" />
+    <Compile Include="Assets\Scripts\AnswerButtonDifficult.cs" />
     <Compile Include="Assets\Scripts\AnswerData.cs" />
     <Compile Include="Assets\Scripts\DataController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
@@ -71,10 +73,13 @@
     <Compile Include="Assets\Scripts\logos.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerProgress.cs" />
+    <Compile Include="Assets\Scripts\PlayerProgressAve.cs" />
+    <Compile Include="Assets\Scripts\PlayerProgressDifficult.cs" />
     <Compile Include="Assets\Scripts\PlayIcon.cs" />
     <Compile Include="Assets\Scripts\QuestionData.cs" />
     <Compile Include="Assets\Scripts\RoundData.cs" />
     <Compile Include="Assets\Scripts\Settings.cs" />
+    <Compile Include="Assets\Scripts\ShowHighscores.cs" />
     <Compile Include="Assets\Scripts\SimpleObjectPool.cs" />
     <None Include="Assets\Fonts\badaboom_bb\font info.txt" />
     <None Include="Assets\Fonts\Nexa-Demo\Licenses\Demo.txt" />

@@ -106,7 +106,7 @@ public class GameController : MonoBehaviour
         {
             do
             {
-                target = logoitem[Random.Range(0, 31)];
+                target = logoitem[Random.Range(0, 37)];
             }
             while (chosenlogos.Contains(target) == true);
             
@@ -123,7 +123,7 @@ public class GameController : MonoBehaviour
         {
             do
             {
-                choice = logoitem[Random.Range(0,31)];
+                choice = logoitem[Random.Range(0,37)];
             }
             while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]) ;
             button[z] = choice;
@@ -167,7 +167,7 @@ public class GameController : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene("MenuScreen");
+        SceneManager.LoadScene("MainMenu");
     }
 
 
