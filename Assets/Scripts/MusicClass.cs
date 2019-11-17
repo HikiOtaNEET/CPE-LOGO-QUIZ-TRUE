@@ -19,4 +19,16 @@ public class MusicClass : MonoBehaviour
     {
         _audioSource.Stop();
     }
+
+    public void SoundToggle()
+    {
+        if (PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            PlayerPrefs.SetInt("Muted", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Muted", 0);
+        }
+    }
 }
