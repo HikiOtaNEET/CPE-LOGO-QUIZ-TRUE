@@ -8,24 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Persistent.unity
+    guid: 2ae1b84213fcf7d42870799aa882f0d4
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: fa2087155b02388429fedec34003b8f3
   - enabled: 1
     path: Assets/Scenes/Difficulty.unity
     guid: 2784cc2b8f43e7346b0682140a1d9217
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/af71e90a79abd8f4e8fef43fc562d622
-    guid: af71e90a79abd8f4e8fef43fc562d622
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/474e4bf7751336f4b9bd0f43eace5ca7
-    guid: 474e4bf7751336f4b9bd0f43eace5ca7
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/e7d3e73226a08484cbd28177617c6e0e
-    guid: e7d3e73226a08484cbd28177617c6e0e
+  - enabled: 1
+    path: Assets/Scenes/Easy.unity
+    guid: ee842ba2a39014e40b30eacaa14d80c2
+  - enabled: 1
+    path: Assets/Scenes/Average.unity
+    guid: 028ba7981a8e2da488306b56357cb2e2
+  - enabled: 1
+    path: Assets/Scenes/Difficult.unity
+    guid: fbdd9b1b29954a04188362963f18c3ac
   - enabled: 1
     path: Assets/Scenes/About.unity
     guid: aae5eb9ca97108943a4f39d66f11d6ef
@@ -35,16 +35,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Help.unity
     guid: 59c71aeca91f3d740b4e0cbd22c069c8
-  - enabled: 1
-    path: Assets/Scenes/Persistent.unity
-    guid: 2ae1b84213fcf7d42870799aa882f0d4
-  - enabled: 1
-    path: Assets/Scenes/Average.unity
-    guid: 028ba7981a8e2da488306b56357cb2e2
-  - enabled: 1
-    path: Assets/Scenes/Difficult.unity
-    guid: fbdd9b1b29954a04188362963f18c3ac
-  - enabled: 1
-    path: Assets/Scenes/Easy.unity
-    guid: ee842ba2a39014e40b30eacaa14d80c2
   m_configObjects: {}

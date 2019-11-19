@@ -10,7 +10,7 @@ public class DataController : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         LoadPlayerProgress();
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("MainMenu");
 
     }
 
