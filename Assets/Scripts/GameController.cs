@@ -44,13 +44,19 @@ public class GameController : MonoBehaviour
         timeRemaining = currentRoundData.timeLimitInSeconds;
         currentRoundData.pointsAddedForCorrectAnswer = 100;
 
+
+        //jsonString = File.ReadAllText("Assets/Scripts/directory.json");
+        //logos items = JsonUtility.FromJson<logos>(jsonString);  //load JSON file
+
+        //logoitem = items.easy;
+
+        /* NEW COODE BY Ryan Verzo */
         TextAsset w = Resources.Load<TextAsset>("directory");
         JSONObject jSONObject = (JSONObject)JSON.Parse(w.text);
-        Debug.Log(jSONObject);
-        jsonString = File.ReadAllText("Assets/Scripts/directory.json");
-        logos items = JsonUtility.FromJson<logos>(jsonString);  //load JSON file
-
-        logoitem = items.easy;
+        logoitem = new string[jSONObject["easy"].Count];
+        for (int i = 0; i < jSONObject["easy"].Count; i++)
+            logoitem[i] = jSONObject["easy"][i];
+        /* Credits nyo sya hahaha jk */
 
         playerScore = 0;
         questionIndex = 0;

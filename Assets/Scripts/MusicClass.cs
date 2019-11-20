@@ -3,7 +3,7 @@
 public class MusicClass : MonoBehaviour
 {
     private AudioSource _audioSource;
-    private void Awake()
+    private void Start()
     {
         DontDestroyOnLoad(transform.gameObject);
         _audioSource = GetComponent<AudioSource>();

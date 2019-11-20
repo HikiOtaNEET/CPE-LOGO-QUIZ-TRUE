@@ -8,7 +8,7 @@ public class DataController : MonoBehaviour
     private PlayerProgress playerProgress;
     public void Start() 
     {
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(gameObject);
         LoadPlayerProgress();
         SceneManager.LoadScene("Start");
 
