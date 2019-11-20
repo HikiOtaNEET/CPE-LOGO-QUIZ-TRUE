@@ -44,6 +44,9 @@ public class GameController : MonoBehaviour
         timeRemaining = currentRoundData.timeLimitInSeconds;
         currentRoundData.pointsAddedForCorrectAnswer = 100;
 
+        TextAsset w = Resources.Load<TextAsset>("directory");
+        JSONObject jSONObject = (JSONObject)JSON.Parse(w.text);
+        Debug.Log(jSONObject);
         jsonString = File.ReadAllText("Assets/Scripts/directory.json");
         logos items = JsonUtility.FromJson<logos>(jsonString);  //load JSON file
 
@@ -106,7 +109,7 @@ public class GameController : MonoBehaviour
         {
             do
             {
-                target = logoitem[Random.Range(0, 37)];
+                target = logoitem[UnityEngine.Random.Range(0, 37)];
             }
             while (chosenlogos.Contains(target) == true);
             
@@ -123,13 +126,13 @@ public class GameController : MonoBehaviour
         {
             do
             {
-                choice = logoitem[Random.Range(0,37)];
+                choice = logoitem[UnityEngine.Random.Range(0,37)];
             }
             while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]) ;
             button[z] = choice;
         }
 
-        button[Random.Range(0, 3)] = chosenlogos[questionIndex];
+        button[UnityEngine.Random.Range(0, 3)] = chosenlogos[questionIndex];
 
     }
     public void AnswerButtonClicked(string answerText)
