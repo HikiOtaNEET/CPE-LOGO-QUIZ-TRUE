@@ -266,7 +266,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dominico Chua
+  m_Text: 'Dominico Chua
+
+    "Project Manager"'
 --- !u!222 &79162210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -717,7 +719,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 195.6, y: -561}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150049970
 MonoBehaviour:
@@ -739,7 +741,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 27c2678776150ad45adf2f5893bcd83b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f49f3fa9fe9f035418a06727c91f8ebd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -827,7 +829,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Algene Quinto
+  m_Text: 'Algene Quinto
+
+    "Technical Writer"'
 --- !u!222 &1179355632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -870,8 +874,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 195.6, y: -24}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 211.75, y: -22}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1292903938
 MonoBehaviour:
@@ -893,7 +897,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6eb63b5edb3ff09458de75ae441e0ce2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 844231e2c3f576444809f901b566c773, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1166,7 +1170,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Kendrick Zuniga
+  m_Text: 'Kendrick Zuniga
+
+    "Subject Matter Expert"'
 --- !u!222 &1489416767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1209,8 +1215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180.5, y: 249}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -172.55, y: 270}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1608129431
 MonoBehaviour:
@@ -1232,7 +1238,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cfa73fcbb6cb03c4ba2d699fb4bce9a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d6ac99bf0e51fb4cbd75255055677f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1476,7 +1482,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Jeremy Dela Cruz
 
-'
+    "Programmer"'
 --- !u!222 &1947784118
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1668,8 +1674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180.5, y: -289.3}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -172.55, y: -276.8}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967195281
 MonoBehaviour:
@@ -1691,7 +1697,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 985743b8a5fcc56419e29700bd939fba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d6a769592be3004db5f303d0dc1d4d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
