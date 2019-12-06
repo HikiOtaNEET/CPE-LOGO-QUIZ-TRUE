@@ -105,17 +105,17 @@ public class DataController : MonoBehaviour
         }
     }
 
-    private void SavePlayerProgress()
+    public void SavePlayerProgress()
     {
         PlayerPrefs.SetFloat("highestScore", playerProgress.highestScore);
     }
 
-    private void SavePlayerProgressAve()
+    public void SavePlayerProgressAve()
     {
         PlayerPrefs.SetFloat("highestScoreAve", playerProgress.highestScoreAve);
     }
 
-    private void SavePlayerProgressDifficult()
+    public void SavePlayerProgressDifficult()
     {
         PlayerPrefs.SetFloat("highestScoreDifficult", playerProgress.highestScoreDifficult);
     }

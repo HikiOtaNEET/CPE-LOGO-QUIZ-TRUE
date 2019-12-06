@@ -50,13 +50,13 @@ public class GameController : MonoBehaviour
 
         //logoitem = items.easy;
 
-        /* NEW COODE BY Ryan Verzo */
+        
         TextAsset w = Resources.Load<TextAsset>("directory");
         JSONObject jSONObject = (JSONObject)JSON.Parse(w.text);
         logoitem = new string[jSONObject["easy"].Count];
         for (int i = 0; i < jSONObject["easy"].Count; i++)
             logoitem[i] = jSONObject["easy"][i];
-        /* Credits nyo sya hahaha jk */
+        
 
         playerScore = 0;
         questionIndex = 0;

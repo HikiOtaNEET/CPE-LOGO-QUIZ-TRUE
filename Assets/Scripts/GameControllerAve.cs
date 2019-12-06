@@ -50,13 +50,12 @@ public class GameControllerAve : MonoBehaviour
         //logos items = JsonUtility.FromJson<logos>(jsonString);  //load JSON file
 
         //logoitem = items.easy;
-        /* NEW COODE BY Ryan Verzo */
         TextAsset w = Resources.Load<TextAsset>("directoryAve");
         JSONObject jSONObject = (JSONObject)JSON.Parse(w.text);
         logoitem = new string[jSONObject["easy"].Count];
         for (int i = 0; i < jSONObject["easy"].Count; i++)
             logoitem[i] = jSONObject["easy"][i];
-        /* Credits nyo sya hahaha jk */
+
         Debug.Log(logoitem);
         
         Debug.Log("checkpoint 2");
@@ -81,7 +80,7 @@ public class GameControllerAve : MonoBehaviour
     {
         RemoveAnswerButtons();
 
-        timeRemaining = 10;
+        timeRemaining = 8;
 
         path = "Sprites/Average/" + chosenlogos[questionIndex]; // put in pathpp
         logoarea.GetComponent<Image>().sprite = Resources.Load<Sprite>(path);

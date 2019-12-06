@@ -80,6 +80,8 @@
     <Compile Include="Assets\Scripts\PlayIcon.cs" />
     <Compile Include="Assets\Scripts\PlayMusic.cs" />
     <Compile Include="Assets\Scripts\QuestionData.cs" />
+    <Compile Include="Assets\Scripts\Quit.cs" />
+    <Compile Include="Assets\Scripts\resetmo.cs" />
     <Compile Include="Assets\Scripts\RoundData.cs" />
     <Compile Include="Assets\Scripts\Settings.cs" />
     <Compile Include="Assets\Scripts\ShowHighscores.cs" />

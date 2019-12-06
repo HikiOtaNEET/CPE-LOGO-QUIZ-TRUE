@@ -7,6 +7,9 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject panel;
     bool state;
+    public GameObject ConfirmQuit;
+
+    bool status;
 
     public void OpenPanel()
     {
@@ -27,8 +30,16 @@ public class PauseMenu : MonoBehaviour
     }
     public void QuitGame()
     {
-        Application.Quit();
+        status = !status;
+        ConfirmQuit.SetActive(state);
     }
-
+     public void Yesplz()
+    {
+       Application.Quit();
+    }
+       public void Noplz()
+    {
+        ConfirmQuit.SetActive(false);
+    }
 
 }

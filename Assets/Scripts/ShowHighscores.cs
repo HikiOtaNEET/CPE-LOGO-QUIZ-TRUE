@@ -29,8 +29,28 @@ public class ShowHighscores : MonoBehaviour
         diff.text = playerProgress.highestScoreDifficult.ToString();
     }
 
+
+    private void Update() {
+        easy.text = playerProgress.highestScore.ToString();
+        average.text = playerProgress.highestScoreAve.ToString();
+        diff.text = playerProgress.highestScoreDifficult.ToString();
+    }
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("MenuScreen");
     }
+
+
+    public void resetHighscore(){
+
+        playerProgress.highestScore = 0;
+        playerProgress.highestScoreAve = 0;
+        playerProgress.highestScoreDifficult = 0;
+
+        dataController.SubmitNewPlayerScore(0);
+        dataController.SubmitNewPlayerScoreAve(0);
+        dataController.SubmitNewPlayerScoreDifficult(0);
+
+    }
+
 }
