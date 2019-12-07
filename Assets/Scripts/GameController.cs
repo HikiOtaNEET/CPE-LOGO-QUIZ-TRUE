@@ -137,8 +137,8 @@ public class GameController : MonoBehaviour
             while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]) ;
             button[z] = choice;
         }
-
-        button[UnityEngine.Random.Range(0, 3)] = chosenlogos[questionIndex];
+        var holdthis = UnityEngine.Random.Range(0, 3);
+        button[holdthis] = chosenlogos[questionIndex];
 
     }
     public void AnswerButtonClicked(string answerText)
