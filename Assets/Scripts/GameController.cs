@@ -18,10 +18,6 @@ public class GameController : MonoBehaviour
     public Transform answerButtonParent;
     public GameObject roundEndDisplay;
     public Text highScoreDisplay;
-    public GameObject arrow1;
-    public GameObject arrow2;
-    public GameObject arrow3;
-    public GameObject arrow4;
 
     string path;
     string jsonString;
@@ -130,7 +126,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private int choicepicker()
+    private void choicepicker()
     {
         for (int z = 0; z < 4; z++)
         {
@@ -141,9 +137,8 @@ public class GameController : MonoBehaviour
             while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]) ;
             button[z] = choice;
         }
-        var holdthis = UnityEngine.Random.Range(0, 3);
-        button[holdthis] = chosenlogos[questionIndex];
-        return holdthis;
+
+        button[UnityEngine.Random.Range(0, 3)] = chosenlogos[questionIndex];
 
     }
     public void AnswerButtonClicked(string answerText)
