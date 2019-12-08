@@ -7,7 +7,7 @@ public class AnswerButton : MonoBehaviour
 
     public Text answerText;
 
-    private string answerData;
+    
     private GameController gameController;
 
     // Use this for initialization

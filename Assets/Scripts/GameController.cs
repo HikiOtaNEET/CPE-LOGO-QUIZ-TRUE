@@ -18,6 +18,9 @@ public class GameController : MonoBehaviour
     public Transform answerButtonParent;
     public GameObject roundEndDisplay;
     public Text highScoreDisplay;
+    public Text status;
+    public Text correctAnswer;
+    public GameObject showAnswer;
 
     string path;
     string jsonString;
@@ -30,7 +33,7 @@ public class GameController : MonoBehaviour
 
     private DataController dataController;
     private RoundData currentRoundData;
-
+    
     private bool isRoundActive;
     private float timeRemaining;
     private int questionIndex;
@@ -50,13 +53,13 @@ public class GameController : MonoBehaviour
 
         //logoitem = items.easy;
 
-        
+        /* NEW COODE BY Ryan Verzo */
         TextAsset w = Resources.Load<TextAsset>("directory");
         JSONObject jSONObject = (JSONObject)JSON.Parse(w.text);
         logoitem = new string[jSONObject["easy"].Count];
         for (int i = 0; i < jSONObject["easy"].Count; i++)
             logoitem[i] = jSONObject["easy"][i];
-        
+        /* Credits nyo sya hahaha jk */
 
         playerScore = 0;
         questionIndex = 0;
@@ -79,10 +82,11 @@ public class GameController : MonoBehaviour
         RemoveAnswerButtons();
 
         timeRemaining = 10;
-
+        Debug.Log("Question index: " + questionIndex);
         path = "Sprites/Easy/" + chosenlogos[questionIndex]; // put in pathpp
         logoarea.GetComponent<Image>().sprite = Resources.Load<Sprite>(path);
 
+        Debug.Log("You are at question no. " + (questionIndex+1));
         Debug.Log(chosenlogos[questionIndex]);
 
         choicepicker();
@@ -137,8 +141,7 @@ public class GameController : MonoBehaviour
             while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]) ;
             button[z] = choice;
         }
-        var holdthis = UnityEngine.Random.Range(0, 3);
-        button[holdthis] = chosenlogos[questionIndex];
+        button[UnityEngine.Random.Range(0, 3)] = chosenlogos[questionIndex];
 
     }
     public void AnswerButtonClicked(string answerText)
@@ -148,12 +151,21 @@ public class GameController : MonoBehaviour
             playerScore += currentRoundData.pointsAddedForCorrectAnswer;
             playerScore += (Mathf.Round(timeRemaining) * 10);
             scoreDisplayText.text = playerScore.ToString();
+            status.text = "Correct";
+            correctAnswer.text = chosenlogos[questionIndex];
+            StartCoroutine(showtime());
+            timeRemaining = 3f;
+        }
+        else {
+            status.text = "Wrong";
+            correctAnswer.text = chosenlogos[questionIndex];
+            StartCoroutine(showtime());
+            timeRemaining = 3f;
         }
 
         if ( 10 > questionIndex + 1)
         {
-            questionIndex++;
-            ShowQuestion();
+            Debug.Log("Proceed");
         }
         else
         {
@@ -183,6 +195,12 @@ public class GameController : MonoBehaviour
     private void UpdateTimeRemainingDisplay()
     {
         timeRemainingDisplayText.text =  Mathf.Round(timeRemaining).ToString();
+    }
+
+    IEnumerator showtime(){
+        showAnswer.SetActive(true);
+        yield return new WaitForSecondsRealtime(3);
+        showAnswer.SetActive(false);
     }
 
 
