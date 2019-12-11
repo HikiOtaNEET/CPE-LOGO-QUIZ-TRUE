@@ -18,6 +18,9 @@ public class GameControllerAve : MonoBehaviour
     public Transform answerButtonParent;
     public GameObject roundEndDisplay;
     public Text highScoreDisplay;
+    public Text status;
+    public Text correctAnswer;
+    public GameObject showAnswer;
 
     string path;
     string jsonString;
@@ -39,8 +42,6 @@ public class GameControllerAve : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("checkpoint 1");
-
         dataController = FindObjectOfType<DataController>();
         currentRoundData = dataController.GetCurrentRoundData();
         timeRemaining = currentRoundData.timeLimitInSeconds;
@@ -57,7 +58,7 @@ public class GameControllerAve : MonoBehaviour
             logoitem[i] = jSONObject["easy"][i];
 
         Debug.Log(logoitem);
-        
+
         Debug.Log("checkpoint 2");
 
         playerScore = 0;
@@ -70,9 +71,9 @@ public class GameControllerAve : MonoBehaviour
         isRoundActive = true;
 
 
-        
-        
-    
+
+
+
 
     }
 
@@ -85,13 +86,14 @@ public class GameControllerAve : MonoBehaviour
         path = "Sprites/Average/" + chosenlogos[questionIndex]; // put in pathpp
         logoarea.GetComponent<Image>().sprite = Resources.Load<Sprite>(path);
 
+        Debug.Log("You are at question no. " + (questionIndex + 1));
         Debug.Log(chosenlogos[questionIndex]);
 
         choicepicker();
 
         for (int i = 0; i < 4; i++)
         {
-            
+
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
@@ -113,14 +115,14 @@ public class GameControllerAve : MonoBehaviour
     private void logopicker()
     {
 
-        for ( int x = 0; x < 10; x++)
+        for (int x = 0; x < 10; x++)
         {
             do
             {
-                target = logoitem[Random.Range(0, 36)];
+                target = logoitem[UnityEngine.Random.Range(0, 27)];
             }
             while (chosenlogos.Contains(target) == true);
-            
+
             chosenlogos[x] = target; //random item in the dir
             Debug.Log("chosen/" + target);
 
@@ -134,12 +136,11 @@ public class GameControllerAve : MonoBehaviour
         {
             do
             {
-                choice = logoitem[Random.Range(0,36)];
+                choice = logoitem[UnityEngine.Random.Range(0, 27)];
             }
-            while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]) ;
+            while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]);
             button[z] = choice;
         }
-
         button[Random.Range(0, 3)] = chosenlogos[questionIndex];
 
     }
@@ -150,18 +151,20 @@ public class GameControllerAve : MonoBehaviour
             playerScore += currentRoundData.pointsAddedForCorrectAnswer;
             playerScore += (Mathf.Round(timeRemaining) * 10);
             scoreDisplayText.text = playerScore.ToString();
-        }
-
-        if ( 10 > questionIndex + 1)
-        {
-            questionIndex++;
-            ShowQuestion();
+            status.text = "Correct!";
+            status.color = new Color(0.1110716f, 0.6037736f, 0.1562739f, 1.0f);
+            correctAnswer.text = chosenlogos[questionIndex];
+            StartCoroutine(showtime());
+            timeRemaining = 2f;
         }
         else
         {
-            EndRound();
+            status.text = "Wrong!";
+            status.color = Color.red;
+            correctAnswer.text = chosenlogos[questionIndex];
+            StartCoroutine(showtime());
+            timeRemaining = 2f;
         }
-
 
     }
 
@@ -184,7 +187,14 @@ public class GameControllerAve : MonoBehaviour
 
     private void UpdateTimeRemainingDisplay()
     {
-        timeRemainingDisplayText.text =  Mathf.Round(timeRemaining).ToString();
+        timeRemainingDisplayText.text = Mathf.Round(timeRemaining).ToString();
+    }
+
+    IEnumerator showtime()
+    {
+        showAnswer.SetActive(true);
+        yield return new WaitForSecondsRealtime(2);
+        showAnswer.SetActive(false);
     }
 
 
@@ -200,6 +210,15 @@ public class GameControllerAve : MonoBehaviour
             {
                 questionIndex++;
                 ShowQuestion();
+            }
+
+            if (10 > questionIndex + 1)
+            {
+                Debug.Log("Proceed");
+            }
+            else
+            {
+                EndRound();
             }
 
         }

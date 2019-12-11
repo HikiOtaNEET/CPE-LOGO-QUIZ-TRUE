@@ -7,7 +7,6 @@ public class AnswerButtonAve : MonoBehaviour
 
     public Text answerText;
 
-    private string answerData;
     private GameControllerAve gameControllerAve;
 
     // Use this for initialization

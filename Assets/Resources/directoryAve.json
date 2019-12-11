@@ -1,7 +1,5 @@
 {
 	"easy" : [
-		"2.54 centimeters",
-		"360kJ",
 		"7400-NAND",
 		"7402-NOR",
 		"7404-NOT",
@@ -11,17 +9,13 @@
 		"7486-XOR",
 		"BJT-transistor",
 		"cathode ray oscilloscope",
-		"Cosine law or law of cosines",
-		"Density",
 		"digital capacitive sensor",
 		"Digital Display Unit",
 		"digital logic trainer",
-		"Displacement",
 		"FET-transistor",
 		"gas sensor",
 		"ir sensor",
 		"JFET-transistor",
-		"Mean",
 		"MOSFET-transistor",
 		"Photodiode",
 		"Pin-diode",
@@ -30,11 +24,8 @@
 		"Regulated DC Power Supply",
 		"relay module",
 		"RGB-LED",
-		"sec,csc,cot",
-		"Sine law or law of sines",
 		"Thermistor",
 		"Toggle-switch",
-		"Voltage Divider Rule",
 		"Zener-diode"
 	]
 }

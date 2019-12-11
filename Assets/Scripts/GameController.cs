@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
 
     private DataController dataController;
     private RoundData currentRoundData;
-    
+
     private bool isRoundActive;
     private float timeRemaining;
     private int questionIndex;
@@ -71,8 +71,8 @@ public class GameController : MonoBehaviour
         isRoundActive = true;
 
 
-        
-        
+
+
 
 
     }
@@ -86,14 +86,14 @@ public class GameController : MonoBehaviour
         path = "Sprites/Easy/" + chosenlogos[questionIndex]; // put in pathpp
         logoarea.GetComponent<Image>().sprite = Resources.Load<Sprite>(path);
 
-        Debug.Log("You are at question no. " + (questionIndex+1));
+        Debug.Log("You are at question no. " + (questionIndex + 1));
         Debug.Log(chosenlogos[questionIndex]);
 
         choicepicker();
 
         for (int i = 0; i < 4; i++)
         {
-           
+
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
@@ -115,14 +115,14 @@ public class GameController : MonoBehaviour
     private void logopicker()
     {
 
-        for ( int x = 0; x < 10; x++)
+        for (int x = 0; x < 10; x++)
         {
             do
             {
-                target = logoitem[UnityEngine.Random.Range(0, 37)];
+                target = logoitem[UnityEngine.Random.Range(0, 24)];
             }
             while (chosenlogos.Contains(target) == true);
-            
+
             chosenlogos[x] = target; //random item in the dir
             Debug.Log("chosen/" + target);
 
@@ -136,9 +136,9 @@ public class GameController : MonoBehaviour
         {
             do
             {
-                choice = logoitem[UnityEngine.Random.Range(0,37)];
+                choice = logoitem[UnityEngine.Random.Range(0, 24)];
             }
-            while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]) ;
+            while (button.Contains(choice) == true || choice == chosenlogos[questionIndex]);
             button[z] = choice;
         }
         button[UnityEngine.Random.Range(0, 3)] = chosenlogos[questionIndex];
@@ -151,27 +151,20 @@ public class GameController : MonoBehaviour
             playerScore += currentRoundData.pointsAddedForCorrectAnswer;
             playerScore += (Mathf.Round(timeRemaining) * 10);
             scoreDisplayText.text = playerScore.ToString();
-            status.text = "Correct";
+            status.text = "Correct!";
+            status.color = new Color(0.1110716f, 0.6037736f, 0.1562739f, 1.0f);
             correctAnswer.text = chosenlogos[questionIndex];
             StartCoroutine(showtime());
-            timeRemaining = 3f;
-        }
-        else {
-            status.text = "Wrong";
-            correctAnswer.text = chosenlogos[questionIndex];
-            StartCoroutine(showtime());
-            timeRemaining = 3f;
-        }
-
-        if ( 10 > questionIndex + 1)
-        {
-            Debug.Log("Proceed");
+            timeRemaining = 2f;
         }
         else
         {
-            EndRound();
+            status.text = "Wrong!";
+            status.color = Color.red;
+            correctAnswer.text = chosenlogos[questionIndex];
+            StartCoroutine(showtime());
+            timeRemaining = 2f;
         }
-
 
     }
 
@@ -194,12 +187,13 @@ public class GameController : MonoBehaviour
 
     private void UpdateTimeRemainingDisplay()
     {
-        timeRemainingDisplayText.text =  Mathf.Round(timeRemaining).ToString();
+        timeRemainingDisplayText.text = Mathf.Round(timeRemaining).ToString();
     }
 
-    IEnumerator showtime(){
+    IEnumerator showtime()
+    {
         showAnswer.SetActive(true);
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(2);
         showAnswer.SetActive(false);
     }
 
@@ -216,6 +210,15 @@ public class GameController : MonoBehaviour
             {
                 questionIndex++;
                 ShowQuestion();
+            }
+
+            if (10 > questionIndex + 1)
+            {
+                Debug.Log("Proceed");
+            }
+            else
+            {
+                EndRound();
             }
 
         }

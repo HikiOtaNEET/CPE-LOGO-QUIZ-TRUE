@@ -1,31 +1,19 @@
 {
 	"easy" : [
-		"1 1 1 1_2",
-		"1024bytes",
-		"Acceleration",
 		"Ammeter",
 		"arduino mega",
 		"arduino uno",
 		"Arduino",
 		"Breadboard",
-		"Capacitor in parallel",
-		"Capacitor in series",
-		"Charge",
 		"crimping tool",
 		"Digital Multimeter",
-		"Kirchoff",
 		"Lead",
 		"Multitester_",
 		"Ohmmeter",
-		"Ohm",
 		"Oscilloscope",
 		"PCB",
-		"Pi=3.141593",
 		"Potentiometer",
 		"Push-button",
-		"Pythagorean theorem",
-		"Resistor in parallel",
-		"Resistor in series",
 		"Resistor",
 		"Rheostat",
 		"rj45",
@@ -35,7 +23,6 @@
 		"Through-hole-LED",
 		"Variac",
 		"Voltage-regulator",
-		"Voltmeter",
-		"13_10"
+		"Voltmeter"
 	]
 }

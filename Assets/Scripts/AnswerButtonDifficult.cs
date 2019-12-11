@@ -7,7 +7,6 @@ public class AnswerButtonDifficult : MonoBehaviour
 
     public Text answerText;
 
-    private string answerData;
     private GameControllerDifficult gameControllerDifficult;
 
     // Use this for initialization
